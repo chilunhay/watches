@@ -12,14 +12,15 @@ import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 import DiscountIcon from "@material-ui/icons/LocalOffer";
 import SideBar from "./Sidebar";
 import { NEW_PRODUCT_RESET } from "../../constants/ProductConstant";
-// import { ToastContainer, toast } from 'react-toastify';
-import { useAlert } from "react-alert";
+import { ToastContainer, toast } from "react-toastify";
+// import { useAlert } from "react-alert";
 
 const CreateProduct = ({ history }) => {
   const dispatch = useDispatch();
-  const alert = useAlert();
 
-  const { loading, error, success } = useSelector((state) => state.createProduct);
+  const { loading, error, success } = useSelector(
+    (state) => state.createProduct
+  );
 
   const [name, setName] = useState("");
   const [price, setPrice] = useState(0);
@@ -40,12 +41,12 @@ const CreateProduct = ({ history }) => {
 
   useEffect(() => {
     if (error) {
-      alert.error(error);
+      toast.error(error);
       dispatch(clearErrors());
     }
 
     if (success) {
-      alert.success("Product Created Successfully");
+      toast.success("Product Created Successfully");
       history.push("/dashboard");
       dispatch({ type: NEW_PRODUCT_RESET });
     }
@@ -111,7 +112,7 @@ const CreateProduct = ({ history }) => {
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
-            
+
             <div>
               <DiscountIcon />
               <input
@@ -190,7 +191,7 @@ const CreateProduct = ({ history }) => {
           </form>
         </div>
       </div>
-      {/* <ToastContainer 
+      <ToastContainer
         position="bottom-center"
         autoClose={5000}
         hideProgressBar={false}
@@ -200,7 +201,7 @@ const CreateProduct = ({ history }) => {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        /> */}
+      />
     </Fragment>
   );
 };
