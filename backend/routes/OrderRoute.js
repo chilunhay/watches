@@ -6,7 +6,7 @@ const {
   getAdminAllOrders,
   updateAdminOrder,
   deleteOrder,
-} = require("../controller/OrderController");
+} = require("../Controller/OrderController");
 const { isAuthenticatedUser, authorizeRoles } = require("../middleware/auth");
 const router = express.Router();
 
