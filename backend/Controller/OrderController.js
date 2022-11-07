@@ -105,6 +105,7 @@ exports.updateAdminOrder = catchAsyncErrors(async (req, res, next) => {
   });
 });
 
+// Update stock
 async function updateStock(id, quantity) {
   const product = await Product.findById(id);
 
