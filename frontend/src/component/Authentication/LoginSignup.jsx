@@ -107,21 +107,6 @@ const LoginSignup = ({ history, location }) => {
         <>
           <MetaData title="Login or Signup" />
           <div className="LoginSignUpContainer">
-            <div className="logo">
-              <Link to="/">
-                <img
-                  src="https://res.cloudinary.com/tdc-watches/image/upload/v1651137603/samples/logo1_kd3fz7.jpg"
-                  alt=""
-                  className="logo"
-                  style={{
-                    width: "150px",
-                    height: "100px",
-                    objectFit: "contain",
-                    cursor: "pointer",
-                  }}
-                />
-              </Link>
-            </div>
             <div className="LoginSignUpBox">
               <div>
                 <div className="login_signUp_toggle">
