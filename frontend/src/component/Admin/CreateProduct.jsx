@@ -12,8 +12,8 @@ import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 import DiscountIcon from "@material-ui/icons/LocalOffer";
 import SideBar from "./Sidebar";
 import { NEW_PRODUCT_RESET } from "../../constants/ProductConstant";
-// import { ToastContainer, toast } from 'react-toastify';
 import { useAlert } from "react-alert";
+// import { ToastContainer, toast } from 'react-toastify';
 
 const CreateProduct = ({ history }) => {
   const dispatch = useDispatch();
